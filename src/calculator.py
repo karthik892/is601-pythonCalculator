@@ -9,3 +9,7 @@ class Calculator:
         res = float(a) + float(b)
         return res
 
+    def subtract(self, a, b):
+        res = float(b) - float(a)
+        return res
+
