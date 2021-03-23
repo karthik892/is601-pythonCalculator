@@ -9,6 +9,16 @@ class MyTestCase(unittest.TestCase):
         calc = Calculator()
         self.assertIsInstance(calc, Calculator)
 
+    def test_addition(self):
+        dir_path = os.path.dirname(os.path.realpath(__file__))
+        csvRead = CsvReader()
+        test_data = csvRead.loadData(dir_path + '\\csv_test\\Unit Test Addition.csv')
+        calc = Calculator()
+        for row in test_data:
+            res = calc.add(row['Value 1'], row['Value 2'])
+            exp = int(row['Result'])
+            self.assertEqual(res, exp)
+
 
 
 
