@@ -13,3 +13,6 @@ class Calculator:
         res = float(b) - float(a)
         return res
 
+    def multiply(self, a, b):
+        return float(a) * float(b)
+

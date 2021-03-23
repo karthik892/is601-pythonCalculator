@@ -29,6 +29,16 @@ class MyTestCase(unittest.TestCase):
             exp = int(row['Result'])
             self.assertEqual(res, exp)
 
+    def test_multiplication(self):
+        dir_path = os.path.dirname(os.path.realpath(__file__))
+        csvRead = CsvReader()
+        test_data = csvRead.loadData(dir_path + '\\csv_test\\Unit Test Multiplication.csv')
+        calc = Calculator()
+        for row in test_data:
+            res = calc.multiply(row['Value 1'], row['Value 2'])
+            exp = int(row['Result'])
+            self.assertEqual(res, exp)
+
 
 
 if __name__ == '__main__':
