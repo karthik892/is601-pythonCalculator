@@ -49,6 +49,17 @@ class MyTestCase(unittest.TestCase):
             exp = float(row['Result'])
             self.assertEqual(round(res, 5), round(exp, 5))
 
+    def test_squaring(self):
+        dir_path = os.path.dirname(os.path.realpath(__file__))
+        csvRead = CsvReader()
+        test_data = csvRead.loadData(dir_path + '\\csv_test\\Unit Test Square.csv')
+        calc = Calculator()
+        for row in test_data:
+            res = calc.square(row['Value 1'])
+            exp = float(row['Result'])
+            self.assertEqual(round(res, 5), round(exp, 5))
+
+
 
 
 if __name__ == '__main__':

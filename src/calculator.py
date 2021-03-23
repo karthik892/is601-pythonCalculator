@@ -18,3 +18,6 @@ class Calculator:
 
     def divide(self, a, b):
         return float(b) / float(a)
+
+    def square(self, a):
+        return float(a) * float(a)
