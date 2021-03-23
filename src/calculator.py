@@ -16,3 +16,5 @@ class Calculator:
     def multiply(self, a, b):
         return float(a) * float(b)
 
+    def divide(self, a, b):
+        return float(b) / float(a)
